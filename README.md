@@ -1,8 +1,0 @@
-# beecausehoney.github.io
-HOME PAGE
-.
-
-[Click here to play](./game/index.html)
-
-
-
