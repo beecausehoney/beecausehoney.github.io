@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Minecraft with CheerpJ</title>
+    <!-- Load the CheerpJ runtime loader -->
+    <script src="https://cjrtnc.leaningtech.com/4.2/loader.js"></script>
+</head>
+<body>
+    <script>
+        (async function () {
+            // Initialize CheerpJ
+            await cheerpjInit();
+            // Create a display area (adjust size as needed for the game)
+            cheerpjCreateDisplay(854, 480);
+            // Run the main JAR file
+            // Replace 'minecraft.jar' with your actual JAR file name and path
+            await cheerpjRunJar("/game/client.jar"); 
+        })();
+    </script>
+</body>
+</html>
