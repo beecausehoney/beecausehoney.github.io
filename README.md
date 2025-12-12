@@ -2,7 +2,7 @@
 HOME PAGE
 .
 
-[Click here to play](./game/placewheregameisviewed.html)
+[Click here to play](./game/index.html)
 
 
 
