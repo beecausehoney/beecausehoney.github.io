@@ -1,6 +1,5 @@
 # beecausehoney.github.io
-hey everybody you have problably watched my first video and clicked on the site
-I'm going to add a game
+HOME PAGE
 .
 
 [Click here to play](./game/placewheregameisviewed.html)
