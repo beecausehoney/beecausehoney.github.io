@@ -1,19 +1,90 @@
-body {
-  background-color: lightblue;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>beecausehoney Home</title>
+  <style>
+    body {
+      background-color: lightblue;
+      font-family: verdana;
+      text-align: center;
+    }
 
-h1 {
-  color: white;
-  text-align: center;
-}
+    h1 {
+      color: white;
+    }
 
-p {
-  font-family: verdana;
-  font-size: 20px;
-# beecausehoney.github.io
-HOME PAGE
+    /* Style for your game links */
+    .nav-links a {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 25px;
+      background-color: white;
+      color: lightblue;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
 
+    .nav-links a:hover {
+      background-color: #f0f0f0;
+      transform: scale(1.05);
+    }
 
-<a href="./game/game.html">Click here to play</a>
-<a href="./game/minecraft.html">minecraft</a>
+    /* The Report Button */
+    .report-btn {
+      margin-top: 40px;
+      padding: 10px 20px;
+      background-color: #ff6b6b; /* A reddish color so it stands out */
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
 
+    /* This hides the form by default */
+    #reportFormContainer {
+      display: none; 
+      margin-top: 20px;
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>HOME PAGE</h1>
+
+  <div class="nav-links">
+    <a href="./game/game.html">Click here to play</a>
+    <a href="./game/minecraft.html">Minecraft</a>
+  </div>
+
+  <br>
+
+  <button class="report-btn" onclick="toggleReport()">Report a Bug</button>
+
+  <div id="reportFormContainer" style="display: none;">
+    <p><strong>Submit your report below:</strong></p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxqD7rUCIai9KyOQK8a55V_WmZyj8w_MrtWZcCAYVqxoAw_w/viewform?embedded=true" 
+            width="640" 
+            height="500" 
+            frameborder="0">Loading…</iframe>
+  </div>
+
+  <script>
+    function toggleReport() {
+      var x = document.getElementById("reportFormContainer");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
