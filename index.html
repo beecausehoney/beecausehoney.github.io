@@ -3,50 +3,65 @@
 <head>
     <title>*** ARCHIVE_NODE_ZERO ***</title>
     <style>
-        body { font-family: "Courier New", Courier, monospace; }
+        body { font-family: "Courier New", Courier, monospace; overflow-x: hidden; }
         .blink { animation: blink 1s steps(5, start) infinite; }
         @keyframes blink { to { visibility: hidden; } }
         a { color: #00FF00; text-decoration: none; }
-        a:hover { background: #00FF00; color: #000; }
+        a:hover { background: #00FF00; color: #000; font-weight: bold; }
+        .terminal-log { background: #050505; border: 1px solid #004400; padding: 5px; font-size: 10px; color: #008800; }
+        .sidebar-header { border-bottom: 2px solid #00FF00; margin-bottom: 10px; padding-bottom: 5px; }
     </style>
 </head>
 <body bgcolor="#000000" text="#00FF00" link="#00FF00" vlink="#008800">
 
 <center>
     <h1><font color="#00FF00">-= UNDERGROUND TECHNICAL ARCHIVE =-</font></h1>
+    <font size="2" class="blink">[ ENCRYPTION: ACTIVE ] [ CONNECTION: TUNNELED ]</font>
     <hr width="95%">
-    <p>Accessing from: <span id="ip-sim">192.168.1.250</span> | Hardware: <b>ThinkPad_X250</b></p>
+    <p>Accessing from: <span id="ip-sim">10.0.2.2</span> | Hardware: <b>THINKPAD_X250_EMU</b></p>
 </center>
 
 <table border="1" width="100%" cellpadding="10" bordercolor="#00FF00">
     <tr>
-        <td width="20%" valign="top" bgcolor="#1A1A1A">
-            <b><u>DATABASE</u></b><br><br>
-            <a href="#">Main_Index</a><br>
-            <a href="#">Xubuntu_Config</a><br>
-            <a href="#">Minecraft_Src</a><br>
-            <a href="#">UTTP_Investigation</a><br>
-            <a href="#">Recovery_Keys</a>
+        <td width="22%" valign="top" bgcolor="#111111">
+            <div class="sidebar-header"><b><u>DATABASE_INDEX</u></b></div>
+            <a href="#">[01] Main_Index</a><br>
+            <a href="#">[02] Xubuntu_Config</a><br>
+            <a href="#">[03] Minecraft_Src</a><br>
+            <a href="#">[04] UTTP_Investigation</a><br>
+            <a href="#">[05] Recovery_Keys</a><br><br>
+            <div class="terminal-log">
+                SYS_LOG:<br>
+                > QEMU_NET_UP<br>
+                > XP_READY<br>
+                > VBS_SIGNED
+            </div>
         </td>
-        <td valign="top">
-            <h2><u>Investigation Tools v2.0</u></h2>
-            <p>Automated scripts for re-coding directories during field work. 
-            <i>Status: <font color="#FFFF00">Experimental</font></i></p>
+        <td valign="top" bgcolor="#0A0A0A">
+            <h2><u>Investigation Tools v2.1</u></h2>
+            <p>Automated payloads for directory re-coding and defensive measures. 
+            <br><i>Status: <font color="#FFFF00">Ready for Deployment</font></i></p>
             
-            <ul>
-                <li>
-                    <a href="payback_recursive.vbs" download><b>Bot_Creator_v8.vbs</b></a> 
-                    <font color="#FF0000" class="blink"> [STABLE] </font>
-                </li>
-                <li><a href="decrypt_recursive.vbs" download>Emergency_Restore.vbs</a></li>
-                <li><a href="#">Packet_Sniffer.vbs</a></li>
-            </ul>
+            <table width="100%" border="0">
+                <tr>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="payback_recursive.vbs" download><b>[EXECUTE] Bot_Creator_v8.vbs</b></a> 
+                                <font color="#FF0000" class="blink"> [STABLE] </font>
+                            </li>
+                            <li><a href="decrypt_recursive.vbs" download>[RESTORE] Emergency_Restore.vbs</a></li>
+                            <li><a href="#">[SNIFF] Packet_Sniffer.vbs</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
 
-            <table border="1" cellpadding="5" bordercolor="#FF0000">
+            <table border="1" cellpadding="8" bordercolor="#FF0000" bgcolor="#220000">
                 <tr><td>
-                    <font size="2" color="#FF0000"><b>SECURITY ADVISORY:</b><br>
-                    Running 'Bot_Creator' will initiate a <b>Recursive Extension Hijack</b>. 
-                    Ensure the <b>UTTP SUCKS</b> key is available before deployment.</font>
+                    <font size="2" color="#FF0000"><b>CRITICAL SECURITY ADVISORY:</b><br>
+                    'Bot_Creator' will initiate a <b>Recursive Extension Hijack</b> across %USERPROFILE%. 
+                    Verify the <b>"UTTP SUCKS"</b> key in the emergency_restore script before execution.</font>
                 </td></tr>
             </table>
         </td>
@@ -56,8 +71,10 @@
 <center>
     <hr width="95%">
     <font size="2">
-        Archive Node Zero | Optimized for 800x600 resolution | 2026-03-28<br>
-        <img src="https://web.archive.org/web/20090830035031im_/http://geocities.com/SiliconValley/Pines/6410/counter.gif">
+        <b>ARCHIVE NODE ZERO</b> | Optimized for 800x600 Legacy Systems | 2026-03-28<br>
+        <img src="https://web.archive.org/web/20090830035031im_/http://geocities.com/SiliconValley/Pines/6410/counter.gif" alt="hits">
+        <br>
+        <font color="#004400">"In anarchy, we find the code."</font>
     </font>
 </center>
 
