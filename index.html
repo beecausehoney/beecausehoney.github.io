@@ -1,82 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>*** ARCHIVE_NODE_ZERO ***</title>
+    <title>*** ARCHIVE_NODE_ZERO // BEE_HOSTING ***</title>
     <style>
-        body { font-family: "Courier New", Courier, monospace; overflow-x: hidden; }
+        body { font-family: "Courier New", Courier, monospace; overflow-x: hidden; margin: 20px; }
         .blink { animation: blink 1s steps(5, start) infinite; }
         @keyframes blink { to { visibility: hidden; } }
         a { color: #00FF00; text-decoration: none; }
         a:hover { background: #00FF00; color: #000; font-weight: bold; }
-        .terminal-log { background: #050505; border: 1px solid #004400; padding: 5px; font-size: 10px; color: #008800; }
-        .sidebar-header { border-bottom: 2px solid #00FF00; margin-bottom: 10px; padding-bottom: 5px; }
+        
+        .main-container { border: 3px solid #00FF00; background: #000; padding: 20px; box-shadow: 10px 10px 0px #004400; }
+        
+        /* The File Hosting Box from your mockup */
+        .file-list-box { 
+            background: #050505; 
+            border: 2px solid #555; 
+            width: 300px; 
+            height: 400px; 
+            padding: 15px; 
+            float: left;
+            overflow-y: scroll;
+            scrollbar-face-color: #333;
+        }
+
+        /* The Welcome/Avatar Box from your mockup */
+        .welcome-box {
+            border: 2px solid #555;
+            background: #0a0a0a;
+            width: 350px;
+            padding: 20px;
+            float: right;
+            text-align: center;
+            color: #ccc;
+        }
+
+        .bee-avatar {
+            width: 150px;
+            height: 150px;
+            background: #FFFF00; /* Yellow from your drawing */
+            border-radius: 50%;
+            border: 4px solid #000;
+            margin: 20px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bee-face {
+            width: 80px;
+            height: 120px;
+            background: #333; /* Dark grey/black head from drawing */
+            margin: 30px auto;
+            border-radius: 40% 40% 0 0;
+        }
+
+        .clear { clear: both; }
+        .terminal-text { font-size: 12px; color: #008800; margin-top: 10px; }
     </style>
 </head>
-<body bgcolor="#000000" text="#00FF00" link="#00FF00" vlink="#008800">
+<body bgcolor="#000000" text="#00FF00">
 
-<center>
-    <h1><font color="#00FF00">-= UNDERGROUND TECHNICAL ARCHIVE =-</font></h1>
-    <font size="2" class="blink">[ ENCRYPTION: ACTIVE ] [ CONNECTION: TUNNELED ]</font>
-    <hr width="95%">
-    <p>Accessing from: <span id="ip-sim">10.0.2.2</span> | Hardware: <b>THINKPAD_X250_EMU</b></p>
-</center>
+<div class="main-container">
+    <center>
+        <h1>bee's website of file hosting</h1>
+        <font size="2" class="blink">[ NODE: ARCHIVE_ZERO ] [ ENCRYPTION: X250_AES ]</font>
+        <hr color="#00FF00">
+    </center>
 
-<table border="1" width="100%" cellpadding="10" bordercolor="#00FF00">
-    <tr>
-        <td width="22%" valign="top" bgcolor="#111111">
-            <div class="sidebar-header"><b><u>DATABASE_INDEX</u></b></div>
-            <a href="#">[01] Main_Index</a><br>
-            <a href="#">[02] Xubuntu_Config</a><br>
-            <a href="#">[03] Minecraft_Src</a><br>
-            <a href="#">[04] UTTP_Investigation</a><br>
-            <a href="#">[05] Recovery_Keys</a><br><br>
-            <div class="terminal-log">
-                SYS_LOG:<br>
-                > QEMU_NET_UP<br>
-                > XP_READY<br>
-                > VBS_SIGNED
-            </div>
-        </td>
-        <td valign="top" bgcolor="#0A0A0A">
-            <h2><u>Investigation Tools v2.1</u></h2>
-            <p>Automated payloads for directory re-coding and defensive measures. 
-            <br><i>Status: <font color="#FFFF00">Ready for Deployment</font></i></p>
+    <div style="margin-top: 30px;">
+        <div class="file-list-box">
+            <b style="color: #4444FF;">INDEX_OF /files/</b><br><br>
+            <a href="bot_generator.vbs" download style="color: #4444FF;">[FILE] bot generator</a><br>
+            <font size="1" color="#FF0000">-- WARNING: RECURSIVE HIJACK DETECTED --</font><br><br>
+            <a href="#">[FILE] minecraft_dev</a><br>
+            <a href="#">[FILE] Untitled_01</a><br>
+            <a href="#">[FILE] Untitled_02</a><br>
+            <a href="#">[FILE] Untitled_03</a><br>
+            <a href="#">[FILE] Untitled_04</a><br>
+            <a href="#">[FILE] Untitled_05</a><br>
+            <a href="#">[FILE] Untitled_06</a><br>
+            <a href="#">[FILE] Untitled_07</a><br>
+            <a href="#">[FILE] Untitled_08</a><br>
+        </div>
+
+        <div class="welcome-box">
+            <p>welcome to bee's website of file hosting to host a file you should ask tru github issues in the main page and if you have suggesting for the ui submit to the issues page again.</p>
             
-            <table width="100%" border="0">
-                <tr>
-                    <td>
-                        <ul>
-                            <li>
-                                <a href="payback_recursive.vbs" download><b>[EXECUTE] Bot_Creator_v8.vbs</b></a> 
-                                <font color="#FF0000" class="blink"> [STABLE] </font>
-                            </li>
-                            <li><a href="decrypt_recursive.vbs" download>[RESTORE] Emergency_Restore.vbs</a></li>
-                            <li><a href="#">[SNIFF] Packet_Sniffer.vbs</a></li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
+            <div class="bee-avatar">
+                <div class="bee-face"></div>
+                <div style="position:absolute; top:70px; left:45px; font-weight:bold; color:black;">-_-</div>
+            </div>
+            
+            <div style="border-top: 1px dashed #555; padding-top: 10px;">
+                <b>ID: INVESTIGATOR_BEE</b><br>
+                <font size="1">Hardware: ThinkPad X250<br>OS: Xubuntu 24.04 LTS</font>
+            </div>
+        </div>
+    </div>
 
-            <table border="1" cellpadding="8" bordercolor="#FF0000" bgcolor="#220000">
-                <tr><td>
-                    <font size="2" color="#FF0000"><b>CRITICAL SECURITY ADVISORY:</b><br>
-                    'Bot_Creator' will initiate a <b>Recursive Extension Hijack</b> across %USERPROFILE%. 
-                    Verify the <b>"UTTP SUCKS"</b> key in the emergency_restore script before execution.</font>
-                </td></tr>
-            </table>
-        </td>
-    </tr>
-</table>
+    <div class="clear"></div>
 
-<center>
-    <hr width="95%">
-    <font size="2">
-        <b>ARCHIVE NODE ZERO</b> | Optimized for 800x600 Legacy Systems | 2026-03-28<br>
-        <img src="https://web.archive.org/web/20090830035031im_/http://geocities.com/SiliconValley/Pines/6410/counter.gif" alt="hits">
-        <br>
-        <font color="#004400">"In anarchy, we find the code."</font>
-    </font>
-</center>
+    <center>
+        <hr color="#00FF00" style="margin-top: 40px;">
+        <div class="terminal-text">
+            SYS_LOG: bot_generator.vbs signed by beecausehoney_dev_team // status: ARMED
+        </div>
+        <font size="1">
+            OPTIMIZED FOR LEGACY XFCE VIEWING | 2026-03-29
+        </font>
+    </center>
+</div>
 
 </body>
 </html>
