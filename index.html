@@ -3,97 +3,71 @@
 <head>
     <title>bee's website of file hosting</title>
     <style>
-        body { font-family: sans-serif; background-color: #ffffff; margin: 50px; }
-        
-        .header-text { font-size: 32px; text-align: center; margin-bottom: 40px; }
+        body { 
+            font-family: sans-serif; 
+            background-color: #ffffff; 
+            margin: 50px; 
+            color: #333;
+        }
+
+        .header-text { 
+            font-size: 32px; 
+            text-align: center; 
+            margin-bottom: 40px; 
+        }
 
         /* Left Black Box (File List) */
-        .file-list { 
-            background-color: #000000; 
-            width: 250px; 
-            height: 450px; 
-            padding: 20px; 
-            float: left;
-            position: relative;
-        }
-
-        .file-list a { color: #0000ff; text-decoration: none; display: block; margin-bottom: 15px; font-size: 18px; }
-        
-        /* The Grey Scrollbar from your drawing */
-        .scrollbar-mock {
-            background-color: #d9d9d9;
-            width: 30px;
-            height: 450px;
-            position: absolute;
-            right: 0;
-            top: 0;
-            border-left: 1px solid #555;
-        }
-
-        /* Right White Box (Welcome Text) */
-        .welcome-box {
-            border: 1px solid #000000;
-            width: 180px;
+        .file-list {
+            background-color: #000000;
+            width: 250px;
             height: 450px;
             padding: 20px;
             float: left;
-            margin-left: 80px;
-            font-size: 14px;
-            text-align: left;
             position: relative;
+            color: #00ff00; /* Retro green text */
+            border-radius: 8px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
         }
 
-        /* The Avatar from your drawing */
-        .bee-avatar {
-            width: 130px;
-            height: 100px;
-            background-color: #ffff00;
-            border: 2px solid #000;
-            border-radius: 50%;
-            position: absolute;
-            bottom: 20px;
-            left: 25px;
-            overflow: hidden;
+        .file-item {
+            margin-bottom: 15px;
+            display: block;
+            color: #00ff00;
+            text-decoration: none;
+            font-family: monospace;
         }
 
-        .bee-head {
-            width: 50px;
-            height: 100px;
-            background-color: #555;
-            margin: 0 auto;
+        .file-item:hover {
+            text-decoration: underline;
         }
 
-        .clear { clear: both; }
+        .content {
+            margin-left: 320px;
+            padding-top: 20px;
+        }
     </style>
 </head>
 <body>
 
-    <div class="header-text">bee's website of file hosting</div>
+    <div class="header-text">hello</div>
 
     <div class="file-list">
-        <a href="#">bot generator</a>
-        <a href="#">CORRUPTED</a>
-        <a href="#">Untitled</a>
-        <a href="#">Untitled</a>
-        <a href="#">Untitled</a>
-        <a href="#">Untitled</a>
-        <a href="#">Untitled</a>
-        <a href="#">Untitled</a>
-        <a href="#">Untitled</a>
-        <a href="#">Untitled</a>
-        <a href="#">Untitled</a>
-        <div class="scrollbar-mock"></div>
-    </div>
-
-    <div class="welcome-box">
-        welcome to bee's website of file hosting to host a file you should ask tru github issues in the main page and if you have suggesting for the ui submit to the issues page again.
+        <div style="border-bottom: 1px solid #333; margin-bottom: 15px; padding-bottom: 5px;">DIRECTORY: /root</div>
         
-        <div class="bee-avatar">
-            <div class="bee-head"></div>
-        </div>
+        <a href="game/minecraft.html" class="file-item">> minecraft_web.html</a>
+        
+        <a href="thing.vbs" download class="file-item">> thing.vbs (SYSTEM_PATCH)</a>
+        
+        <a href="game/game.html" class="file-item">> game_engine.html</a>
     </div>
 
-    <div class="clear"></div>
+    <div class="content">
+        <h2>System Status: Active</h2>
+        <p>Select a file from the terminal to begin initialization.</p>
+        <p style="font-size: 12px; color: #999; margin-top: 200px;">
+            "If this software broke your computer, it was your fault for running it wrong."
+        </p>
+    </div>
 
 </body>
 </html>
