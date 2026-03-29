@@ -1,114 +1,99 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>*** ARCHIVE_NODE_ZERO // BEE_HOSTING ***</title>
+    <title>bee's website of file hosting</title>
     <style>
-        body { font-family: "Courier New", Courier, monospace; overflow-x: hidden; margin: 20px; }
-        .blink { animation: blink 1s steps(5, start) infinite; }
-        @keyframes blink { to { visibility: hidden; } }
-        a { color: #00FF00; text-decoration: none; }
-        a:hover { background: #00FF00; color: #000; font-weight: bold; }
+        body { font-family: sans-serif; background-color: #ffffff; margin: 50px; }
         
-        .main-container { border: 3px solid #00FF00; background: #000; padding: 20px; box-shadow: 10px 10px 0px #004400; }
-        
-        /* The File Hosting Box from your mockup */
-        .file-list-box { 
-            background: #050505; 
-            border: 2px solid #555; 
-            width: 300px; 
-            height: 400px; 
-            padding: 15px; 
+        .header-text { font-size: 32px; text-align: center; margin-bottom: 40px; }
+
+        /* Left Black Box (File List) */
+        .file-list { 
+            background-color: #000000; 
+            width: 250px; 
+            height: 450px; 
+            padding: 20px; 
             float: left;
-            overflow-y: scroll;
-            scrollbar-face-color: #333;
-        }
-
-        /* The Welcome/Avatar Box from your mockup */
-        .welcome-box {
-            border: 2px solid #555;
-            background: #0a0a0a;
-            width: 350px;
-            padding: 20px;
-            float: right;
-            text-align: center;
-            color: #ccc;
-        }
-
-        .bee-avatar {
-            width: 150px;
-            height: 150px;
-            background: #FFFF00; /* Yellow from your drawing */
-            border-radius: 50%;
-            border: 4px solid #000;
-            margin: 20px auto;
             position: relative;
+        }
+
+        .file-list a { color: #0000ff; text-decoration: none; display: block; margin-bottom: 15px; font-size: 18px; }
+        
+        /* The Grey Scrollbar from your drawing */
+        .scrollbar-mock {
+            background-color: #d9d9d9;
+            width: 30px;
+            height: 450px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-left: 1px solid #555;
+        }
+
+        /* Right White Box (Welcome Text) */
+        .welcome-box {
+            border: 1px solid #000000;
+            width: 180px;
+            height: 450px;
+            padding: 20px;
+            float: left;
+            margin-left: 80px;
+            font-size: 14px;
+            text-align: left;
+            position: relative;
+        }
+
+        /* The Avatar from your drawing */
+        .bee-avatar {
+            width: 130px;
+            height: 100px;
+            background-color: #ffff00;
+            border: 2px solid #000;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 20px;
+            left: 25px;
             overflow: hidden;
         }
-        
-        .bee-face {
-            width: 80px;
-            height: 120px;
-            background: #333; /* Dark grey/black head from drawing */
-            margin: 30px auto;
-            border-radius: 40% 40% 0 0;
+
+        .bee-head {
+            width: 50px;
+            height: 100px;
+            background-color: #555;
+            margin: 0 auto;
         }
 
         .clear { clear: both; }
-        .terminal-text { font-size: 12px; color: #008800; margin-top: 10px; }
     </style>
 </head>
-<body bgcolor="#000000" text="#00FF00">
+<body>
 
-<div class="main-container">
-    <center>
-        <h1>bee's website of file hosting</h1>
-        <font size="2" class="blink">[ NODE: ARCHIVE_ZERO ] [ ENCRYPTION: X250_AES ]</font>
-        <hr color="#00FF00">
-    </center>
+    <div class="header-text">bee's website of file hosting</div>
 
-    <div style="margin-top: 30px;">
-        <div class="file-list-box">
-            <b style="color: #4444FF;">INDEX_OF /files/</b><br><br>
-            <a href="bot_generator.vbs" download style="color: #4444FF;">[FILE] bot generator</a><br>
-            <font size="1" color="#FF0000">-- WARNING: RECURSIVE HIJACK DETECTED --</font><br><br>
-            <a href="#">[FILE] minecraft_dev</a><br>
-            <a href="#">[FILE] Untitled_01</a><br>
-            <a href="#">[FILE] Untitled_02</a><br>
-            <a href="#">[FILE] Untitled_03</a><br>
-            <a href="#">[FILE] Untitled_04</a><br>
-            <a href="#">[FILE] Untitled_05</a><br>
-            <a href="#">[FILE] Untitled_06</a><br>
-            <a href="#">[FILE] Untitled_07</a><br>
-            <a href="#">[FILE] Untitled_08</a><br>
-        </div>
+    <div class="file-list">
+        <a href="#">bot generator</a>
+        <a href="#">minecraft</a>
+        <a href="#">Untitled</a>
+        <a href="#">Untitled</a>
+        <a href="#">Untitled</a>
+        <a href="#">Untitled</a>
+        <a href="#">Untitled</a>
+        <a href="#">Untitled</a>
+        <a href="#">Untitled</a>
+        <a href="#">Untitled</a>
+        <a href="#">Untitled</a>
+        <div class="scrollbar-mock"></div>
+    </div>
 
-        <div class="welcome-box">
-            <p>welcome to bee's website of file hosting to host a file you should ask tru github issues in the main page and if you have suggesting for the ui submit to the issues page again.</p>
-            
-            <div class="bee-avatar">
-                <div class="bee-face"></div>
-                <div style="position:absolute; top:70px; left:45px; font-weight:bold; color:black;">-_-</div>
-            </div>
-            
-            <div style="border-top: 1px dashed #555; padding-top: 10px;">
-                <b>ID: INVESTIGATOR_BEE</b><br>
-                <font size="1">Hardware: ThinkPad X250<br>OS: Xubuntu 24.04 LTS</font>
-            </div>
+    <div class="welcome-box">
+        welcome to bee's website of file hosting to host a file you should ask tru github issues in the main page and if you have suggesting for the ui submit to the issues page again.
+        
+        <div class="bee-avatar">
+            <div class="bee-head"></div>
         </div>
     </div>
 
     <div class="clear"></div>
-
-    <center>
-        <hr color="#00FF00" style="margin-top: 40px;">
-        <div class="terminal-text">
-            SYS_LOG: bot_generator.vbs signed by beecausehoney_dev_team // status: ARMED
-        </div>
-        <font size="1">
-            OPTIMIZED FOR LEGACY XFCE VIEWING | 2026-03-29
-        </font>
-    </center>
-</div>
 
 </body>
 </html>
