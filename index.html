@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <script>
+    // This finds all your file links
+    const links = document.querySelectorAll('.file-item');
+    const statusText = document.querySelector('.content h2');
+
+    links.forEach(link => {
+        link.onclick = (e) => {
+            // This changes the header on the right when you click
+            statusText.innerText = "System Status: Loading " + link.innerText.replace('> ', '');
+            statusText.style.color = "#00ff00"; // Turns green when loading
+        };
+    });
+</script>
+    
     <title>bee's website of file hosting</title>
     <style>
         body { 
