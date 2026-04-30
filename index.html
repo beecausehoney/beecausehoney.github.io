@@ -1,87 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script>
-    // This finds all your file links
-    const links = document.querySelectorAll('.file-item');
-    const statusText = document.querySelector('.content h2');
-
-    links.forEach(link => {
-        link.onclick = (e) => {
-            // This changes the header on the right when you click
-            statusText.innerText = "System Status: Loading " + link.innerText.replace('> ', '');
-            statusText.style.color = "#00ff00"; // Turns green when loading
-        };
-    });
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Minecraft Beta 1.7.3</title>
     
-    <title>bee's website of file hosting</title>
+    <!-- Load the CheerpJ Runtime -->
+    <script src="https://cjrtnc.leaningtech.com/4.3/loader.js"></script>
+
     <style>
-        body { 
-            font-family: sans-serif; 
-            background-color: #ffffff; 
-            margin: 50px; 
-            color: #333;
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
         }
-
-        .header-text { 
-            font-size: 32px; 
-            text-align: center; 
-            margin-bottom: 40px; 
+        h1 {
+            color: #ffaa00;
+            margin-bottom: 20px;
         }
-
-        /* Left Black Box (File List) */
-        .file-list {
-            background-color: #000000;
-            width: 250px;
-            height: 450px;
-            padding: 20px;
-            float: left;
-            position: relative;
-            color: #00ff00; /* Retro green text */
-            border-radius: 8px;
-            box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
-        }
-
-        .file-item {
-            margin-bottom: 15px;
-            display: block;
-            color: #00ff00;
-            text-decoration: none;
-            font-family: monospace;
-        }
-
-        .file-item:hover {
-            text-decoration: underline;
-        }
-
-        .content {
-            margin-left: 320px;
-            padding-top: 20px;
+        #cheerpj-display {
+            border: 4px solid #555;
+            border-radius: 5px;
+            box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+            background-color: #000;
         }
     </style>
 </head>
 <body>
 
-    <div class="header-text">hello</div>
+    <h1>Minecraft Beta 1.7.3</h1>
 
-    <div class="file-list">
-        <div style="border-bottom: 1px solid #333; margin-bottom: 15px; padding-bottom: 5px;">DIRECTORY: /root</div>
-        
-        <a href="game/minecraft.html" class="file-item">> minecraft_web.html</a>
-        
-        <a href="thing.vbs" download class="file-item">> thingy.vbs (ARCHIVED)</a>
-        
-        <a href="game/game.html" class="file-item">> game_engine.html</a>
-    </div>
+    <!-- The display area for the Java game window -->
+    <div id="cheerpj-display"></div>
 
-    <div class="content">
-        <h2>System Status: Active</h2>
-        <p>Select a file from the terminal to begin initialization.</p>
-        <p style="font-size: 12px; color: #999; margin-top: 200px;">
-            "If this software broke your computer, it was your fault for running it wrong."
-        </p>
-    </div>
+    <script>
+        async function runGame() {
+            // 1. Ask for the player's username before the game loads
+            let playerName = prompt("Enter your Minecraft username:", "Player");
+            
+            // If they click cancel or leave it empty, default to "Player"
+            if (!playerName || playerName.trim() === "") {
+                playerName = "Player";
+            }
+
+            // 2. Initialize the CheerpJ environment
+            await cheerpjInit();
+
+            // 3. Create the game canvas (Width, Height) inside the display div
+            cheerpjCreateDisplay(854, 480, document.getElementById('cheerpj-display'));
+
+            // 4. Run the file directly from your GitHub Pages root
+            // Passing the user's name as an argument to load their profile
+            await cheerpjRunJar("/app/b173.jar", playerName);
+        }
+
+        // Trigger the process on page load
+        window.onload = runGame;
+    </script>
 
 </body>
 </html>
